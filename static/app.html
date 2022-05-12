@@ -38,7 +38,7 @@
 $("#predict-button").click(function(){
             let message = {image: base64Image}
             // you could also use 127.0.0.1 instead of 0.0.0.0 
-            $.post("https://uts-triyas.herokuapp.com//predict", JSON.stringify(message), function(response){
+            $.post("https://uts-triyasnikosptr.herokuapp.com/predict", JSON.stringify(message), function(response){
             $("#prediction").text("results: "+response.prediction[0][0]+" ( confidence : "+response.prediction[0][1]+")");
                 console.log(response);
             });
